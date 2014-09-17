@@ -1,0 +1,25 @@
+<%= form_for(@compra) do |f| %>
+  <% if @compra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@compra.errors.count, "error") %> prohibited this compra from being saved:</h2>
+
+      <ul>
+      <% @compra.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cuerpo %><br>
+    <%= f.text_field :cuerpo %>
+  </div>
+  <div class="field">
+    <%= f.label :comprado %><br>
+    <%= f.check_box :comprado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
