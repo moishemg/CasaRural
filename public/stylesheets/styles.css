@@ -1,0 +1,12 @@
+.lb_cuerpo {
+  font-weight: bold;
+}
+
+.lb_rojo {
+  color:#FF0000;
+  font-size:0.9em;
+}
+
+textarea#area_cuerpo {
+  width: 400px;
+}
