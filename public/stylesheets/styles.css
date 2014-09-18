@@ -1,6 +1,6 @@
 .lb_cuerpo {
   font-weight: bold;
-  width: 400px;
+  width: 75%;
 }
 
 .lb_rojo {
@@ -9,7 +9,7 @@
 }
 
 textarea#area_cuerpo {
-  max-width: 400px;
+  width: 400px;
 }
 
 span {
