@@ -1,18 +1,41 @@
 <%= stylesheet_link_tag "styles" %>
-<h1>Listado de cosas para la Casa Rural</h1>
+<h1>Casa Rural</h1>
+<h2>11-13 Octubre 2014</h2>
 
-<table>
+<div class="div_nota">
+  <b>Nota: </b>
+Llegaremos antes de comer el sábado y nos volvemos después de comer el domingo, por lo tanto tenemos:
+<ul>
+  <li>2 desayunos
+    <span>Por aqui podemos comer pan, dulces y similares. Crepes o tortitas si se desean.</span>
+    <br/>
+  </li>
+  <li>3 almuerzos
+    <span>Para los almuerzos creo que el plato fuerte sería la carne. Acompañada de alguna ensalada, verde o de pimientos.</span>
+    <br/>
+  </li>
+  <li>2 cenas
+    <span>En las cenas cosillas más ligeras, como revueltos de patatas, esparragos... incluso una de las noches pizza</span>
+    <br/>
+  </li>
+</ul>
+Siempre para todas las comidas tenemos los embutidos, el queso, las patatas de paquete y porquerias similares.
+</div>
+<p/>
+<table bgcolor="#D8D8D8">
   <thead>
     <tr>
-      <th>Cuerpo</th>
-      <th>Comprado</th>
-      <th colspan="3"></th>
+      <th colspan="3">Listado de compra</th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
+    <% cont = 0 %>
     <% @compras.order('cuerpo').each do |compra| %>
       <tr>
+        <% cont += 1 %>
+        <td><%= cont %></td>
         <td class="lb_cuerpo"><%= compra.cuerpo %></td>
         <td class="lb_rojo"><%= compra.esComprado() %></td>
 <!--        <td><%= link_to 'Mostrar', compra %></td>-->

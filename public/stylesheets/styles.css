@@ -1,5 +1,6 @@
 .lb_cuerpo {
   font-weight: bold;
+  width: 400px;
 }
 
 .lb_rojo {
@@ -9,4 +10,13 @@
 
 textarea#area_cuerpo {
   width: 400px;
+}
+
+span {
+  display: block;
+}
+
+.div_nota {
+  background: #D0F9F5;
+  padding:5px;
 }
