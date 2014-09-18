@@ -9,7 +9,7 @@
 }
 
 textarea#area_cuerpo {
-  width: 400px;
+  max-width: 400px;
 }
 
 span {
