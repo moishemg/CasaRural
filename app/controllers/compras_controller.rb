@@ -28,7 +28,7 @@ class ComprasController < ApplicationController
 
     respond_to do |format|
       if @compra.save
-        format.html { redirect_to @compra, notice: 'Compra was successfully created.' }
+        format.html { redirect_to compras_path, notice: 'Compra was successfully created.' }
         format.json { render :show, status: :created, location: @compra }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ComprasController < ApplicationController
   def update
     respond_to do |format|
       if @compra.update(compra_params)
-        format.html { redirect_to @compra, notice: 'Compra was successfully updated.' }
+        format.html { redirect_to compras_path, notice: 'Compra was successfully updated.' }
         format.json { render :show, status: :ok, location: @compra }
       else
         format.html { render :edit }

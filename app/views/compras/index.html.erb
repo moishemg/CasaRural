@@ -13,15 +13,23 @@
     <% @compras.each do |compra| %>
       <tr>
         <td><%= compra.cuerpo %></td>
-        <td><%= compra.comprado %></td>
-        <td><%= link_to 'Mostrar', compra %></td>
+        <td><%= compra.esComprado() %></td>
+<!--        <td><%= link_to 'Mostrar', compra %></td>-->
         <td><%= link_to 'Modificar', edit_compra_path(compra) %></td>
         <td><%= link_to 'Eliminar', compra, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
       </tr>
     <% end %>
+    
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'Nueva línea', new_compra_path %>
+<%= form_for([@compra, Compra.new]) do |f| %>
+<p><%= f.label :cuerpo, "Nueva Compra" %><br />
+  <%= f.text_area :cuerpo %>
+</p>
+<p><%= f.submit "Añadir" %></p>
+<% end %>
+
+
