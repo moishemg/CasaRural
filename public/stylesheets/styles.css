@@ -3,6 +3,10 @@
   width: 75%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .lb_rojo {
   color:#FF0000;
   font-size:0.9em;

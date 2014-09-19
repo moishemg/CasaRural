@@ -36,7 +36,7 @@ Siempre para todas las comidas tenemos los embutidos, el queso, las patatas de p
       <tr>
         <% cont += 1 %>
         <td><%= cont %></td>
-        <td class="lb_cuerpo"><%= compra.cuerpo %></td>
+        <td class="lb_cuerpo"><%= link_to compra.cuerpo , edit_compra_path(compra) %></td>
         <td class="lb_rojo"><%= compra.esComprado() %></td>
         <td><%= link_to 'Modificar', edit_compra_path(compra) %> <%= link_to 'Eliminar', compra, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
       </tr>
