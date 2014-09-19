@@ -4,7 +4,7 @@ class Compra < ActiveRecord::Base
     if comprado
       return "Sí"
     else
-      return "Aún pendiente de compra"
+      return "PTE"
     end
   end
 end
