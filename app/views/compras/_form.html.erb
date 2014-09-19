@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "styles" %>
 <%= form_for(@compra) do |f| %>
   <% if @compra.errors.any? %>
     <div id="error_explanation">
@@ -13,10 +14,10 @@
 
   <div class="field">
     <%= f.label :cuerpo %><br>
-    <%= f.text_field :cuerpo %>
+    <%= f.text_area :cuerpo, :class => "text_area" %>
   </div>
   <div class="field">
-    <%= f.label :comprado %><br>
+    <%= f.label :comprado %>
     <%= f.check_box :comprado %>
   </div>
   <div class="actions">

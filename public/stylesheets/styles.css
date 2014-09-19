@@ -8,7 +8,7 @@
   font-size:0.9em;
 }
 
-textarea#area_cuerpo {
+.text_area, textarea#area_cuerpo {
   width: 100%;
   max-width:500px;
 }
